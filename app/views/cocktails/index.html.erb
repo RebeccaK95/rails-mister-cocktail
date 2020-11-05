@@ -1,0 +1,11 @@
+
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+  <% url = cocktail.name.downcase.gsub(/\s+/, "") %>
+  <div class="cocktail-card" style="background-image: url('/assets/<%= url %>.jpg');" >
+    <h2><%= link_to cocktail.name, "cocktails/#{cocktail.id}" %></h2>
+  </div>
+  <% end %>
+</ul>
+</div>
